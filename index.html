@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Crypto Tracker</h1>
+        <div class="currency-selector">
+            <label for="currency">Currency:</label>
+            <select id="currency">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search cryptocurrencies...">
+    </div>
+
+    <div class="crypto-grid">
+        <div class="crypto-list">
+            <table id="cryptoTable">
+                <thead>
+                <tr>
+                    <th>Coin</th>
+                    <th>Price</th>
+                    <th>24h Change</th>
+                    <th>Market Cap</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="cryptoTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="priceChart"></canvas>
+    </div>
+
+    <div class="favorites-section">
+        <h2>Favorites</h2>
+        <div id="favoritesList"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
